@@ -1,0 +1,15 @@
+/bin
+/include
+/lib
+/man
+axgridtools.egg-info
+/build
+/dist
+*.pyc
+.Python
+.idea
+/venv
+last.txt
+/temp
+/tmp
+
