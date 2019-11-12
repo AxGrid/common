@@ -14,7 +14,7 @@ def get(data, path, default=None):
     :return: значение / default
     """
     if "." not in path:
-        return data.get(path, default)
+        return data.item(path, default)
     keys = path.split('.')
     _d = data
     if isinstance(default, list):
@@ -36,7 +36,7 @@ def get(data, path, default=None):
     return _d
 
 
-def set(data, path, value):
+def set(data, path, value, errors=None):
     if "." not in path:
         data[path] = value
         return data

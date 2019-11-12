@@ -11,5 +11,4 @@ class Environment(object):
             return self.env.get(key, kwargs.get("default", None))
 
     def __get(self, key, rules, args):
-        location = rules.get("location", [key])
-        
+        location = rules.item("location", [key])

@@ -8,8 +8,25 @@ class Path(object):
         self.ct_root = ct_root
         self.fs_root = fs_root
 
-    def get(self, ct_target=None, fs_target=None):
+    def item(self, ct_target=None, fs_target=None):
+        fs_target = "./" if not ct_target and not fs_target else fs_target
         return PathObject(self, ct_target=ct_target, fs_target=fs_target)
+
+    def get(self, ct_root=None, fs_root=None):
+        p = self.item(ct_target=ct_root, fs_target=fs_root)
+        return Path(ct_root=p.ct, fs_root=p.fs)
+
+    def fs(self, ct_target=None, fs_target=None):
+        return self.item(ct_target, fs_target).fs
+
+    def ct(self, ct_target=None, fs_target=None):
+        return self.item(ct_target, fs_target).ct
+
+    def fs_rel(self, ct_target=None, fs_target=None):
+        return self.item(ct_target, fs_target).fs_rel
+
+    def ct_rel(self, ct_target=None, fs_target=None):
+        return self.item(ct_target, fs_target).ct_rel
 
 
 class PathObject(object):

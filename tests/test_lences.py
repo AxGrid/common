@@ -1,5 +1,3 @@
-from axgridcommons import __version__
-
 import axgridcommons.lenses as lenses
 
 
@@ -15,3 +13,5 @@ def test_set():
     __data = lenses.set(data, "a.b.c", 8)
     assert __data == data
     assert lenses.get(data, "a.b.c") == 8
+    __data = lenses.set(data, "a.b.e.f.g", 12)
+    assert lenses.get(data, "a.b.e.f.g") == 12

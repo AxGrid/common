@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "axgridcommons"
-version = "0.1.1"
+version = "0.1.2"
 description = "AxGrid commons"
 license = "MIT"
 homepage = "http://axgrid.com"
