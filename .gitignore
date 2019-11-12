@@ -2,7 +2,7 @@
 /include
 /lib
 /man
-axgridtools.egg-info
+axgridcommons.egg-info
 /build
 /dist
 *.pyc
@@ -12,4 +12,4 @@ axgridtools.egg-info
 last.txt
 /temp
 /tmp
-
+.pytest_cache

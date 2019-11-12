@@ -1,6 +1,6 @@
-from axgridtools import __version__
+from axgridcommons import __version__
 
-from axgridtools.path import Path
+from axgridcommons.path import Path
 
 
 def test_version():
