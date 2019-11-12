@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "axgridcommons"
-version = "0.1.0"
+version = "0.1.1"
 description = "AxGrid commons"
 license = "MIT"
 homepage = "http://axgrid.com"
@@ -9,14 +9,15 @@ authors = ["Dmitry Vysochin <dmitry.vysochin@gmail.com>"]
 keywords = ["commons"]
 readme = "README.md"
 classifiers = [
-    "Topic :: Software Development :: Python 3",
-    "Topic :: Software Development :: Tools"
+    "Topic :: Software Development :: Libraries"
 ]
 
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.5"
 asq = "^1.3"
+pyyaml = "^5.1"
+pytoml = "^0.1.21"
 
 [tool.poetry.dev-dependencies]
 pytest = "^3.0"
